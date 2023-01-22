@@ -17,12 +17,12 @@ int tabX = 2;
 int tabY = 2;
 int NumberPerString = 1;
 
-Console.Clear();
-Console.Write($"Вот таблица кубов всех чисел от 1 до {inputNumber}: ");
+Console.Clear();                                //  inputNumber/Math.Abs(inputNumber) = даёт нам минус, если он был у введенного числа 
+Console.Write($"Вот таблица кубов всех чисел от {(inputNumber / Math.Abs(inputNumber))} до {inputNumber}: ");
 while (count <= Math.Abs(inputNumber)) /// пытался построить таблицу - но при больших числах появляются ошибки отрисовки консоли. Победить не смог 
 {
     System.Console.SetCursorPosition(tabX, tabY);
-    System.Console.Write($"{Math.Pow(count, 3)}");
+    System.Console.Write($"{Math.Pow(count * (inputNumber / Math.Abs(inputNumber)), 3)}"); ///  inputNumber/Math.Abs(inputNumber) = даёт нам минус, если он был у введенного числа 
     tabX += 9;
     count++;
     NumberPerString++;
