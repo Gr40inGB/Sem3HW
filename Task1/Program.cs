@@ -13,8 +13,8 @@ int invertNumber = 0;               // это число которое буде
 
 while (inputNumberToCut % 10 > 0) //  пока в вырезаемом числе есть хоть какие-то числа перед зяпятой
 {
-    invertNumber = invertNumber * 10 + inputNumberToCut % 10;   // по сути двигаем число умножая на 10,  освобождая место для прибавления новой цифры
-    inputNumberToCut = Convert.ToInt32(inputNumberToCut) / 10;  // отрезаем число, так как последнее ууже пибавили в инвертируемому 
+    invertNumber = invertNumber * 10 + inputNumberToCut % 10;   // по сути двигаем число влево умножая на 10,  освобождая место для прибавления новой цифры и добавляем её
+    inputNumberToCut = Convert.ToInt32(inputNumberToCut) / 10;  // отрезаем число, так как последнее ууже прибавили к инвертируемому 
 }
 
 if (invertNumber == Math.Abs(inputNumber))  // сравниваем полученные числа
